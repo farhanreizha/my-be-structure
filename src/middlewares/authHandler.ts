@@ -1,4 +1,5 @@
 import db from "@/helpers/db";
+import { sendUnauthorized } from "@/helpers/response";
 import { Request, Response, NextFunction } from "express";
 
 /**
@@ -22,7 +23,7 @@ export const authHandler = async (
 
 	// If token is not provided, return unauthorized response
 	if (!token) {
-		return res.status(401).json({ message: "Unauthorized" });
+		return sendUnauthorized(res, "Unauthorized");
 	}
 
 	// Search for user in database with the provided token
@@ -32,10 +33,11 @@ export const authHandler = async (
 
 	// If user is not found, return unauthorized response
 	if (!user) {
-		return res.status(401).json({ message: "Unauthorized" });
+		return sendUnauthorized(res, "Unauthorized");
 	}
 
 	// Add user object to request body
+	// res.set("userId", user?.id);
 	req.body = user;
 
 	// Call next middleware
