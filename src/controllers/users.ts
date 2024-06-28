@@ -8,7 +8,7 @@ import {
 	sendNotFound,
 	sendOk,
 	sendUnauthorized,
-} from "@/exceptions/response";
+} from "@/helpers/response";
 
 /**
  * Handles the login request.

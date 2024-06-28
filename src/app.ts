@@ -1,5 +1,5 @@
 import express, { Response } from "express";
-import router from "./routers/users";
+import router from "./router/users";
 import errorHandler from "./middlewares/errorHandler";
 
 export default function server(app: express.Application) {

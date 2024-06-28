@@ -1,4 +1,4 @@
-import { loginSchema, registerSchema } from "@/schemas/user";
+import { loginSchema, registerSchema } from "@/helpers/user";
 import { Request } from "express";
 
 export const validateRegister = (req: Request) => {

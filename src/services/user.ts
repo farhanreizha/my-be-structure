@@ -1,4 +1,4 @@
-import prisma from "@/lib/db";
+import prisma from "@/helpers/db";
 import { User } from "@/models/user";
 import { compareSync } from "bcrypt";
 

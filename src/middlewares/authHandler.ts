@@ -1,4 +1,4 @@
-import db from "@/lib/db";
+import db from "@/helpers/db";
 import { Request, Response, NextFunction } from "express";
 
 /**
